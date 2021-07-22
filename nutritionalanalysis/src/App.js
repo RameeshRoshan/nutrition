@@ -49,6 +49,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <h1>rameesh</h1>
         <Title/>
         <Picture list={this.state.list} data={this.state.data}/>
         <Input list={this.state.list} onClick={this.onClick} onClear={this.onClear} onChange={this.onChange} input={this.input}/>
