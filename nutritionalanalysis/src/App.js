@@ -25,7 +25,8 @@ class App extends React.Component {
     this.setState({list: false});
   }
 
-  onClick=()=>{
+  onClick=(e)=>{
+    e.preventDefault();
     this.getData();
   }
 
@@ -38,12 +39,9 @@ class App extends React.Component {
       );
     }))
     .then(contents=>{
-      console.log(contents);
       this.setState({data:contents});
     })
     .then(this.setState({list:true}))
-    
-
   }
 
   render(){
